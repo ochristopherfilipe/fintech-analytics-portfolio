@@ -8,7 +8,7 @@
 CREATE TABLE clientes (
     cliente_id SERIAL PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
-    cpf VARCHAR(14) UNIQUE NOT NULL,
+    cpf VARCHAR(20) UNIQUE NOT NULL,
     tipo_cliente VARCHAR(2) CHECK (tipo_cliente IN ('PF', 'PJ')),
     data_cadastro DATE NOT NULL,
     status VARCHAR(20) DEFAULT 'Ativo'
